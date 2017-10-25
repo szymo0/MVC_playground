@@ -1,0 +1,21 @@
+﻿@model MVC.Models.Driver
+
+@{
+    ViewBag.Title = "Pokazuj kierowcę";
+    //Layout = "_Layout";
+
+    var ble = Model.Name + Model.Surname + Model.Pesel + Model.IsAlive;
+}
+
+<h2>title</h2>
+<h3>@ble</h3>
+
+@Html.DisplayNameFor(m => m.Name)
+@Html.TextBoxFor(m => m.Name)
+@Html.DisplayNameFor(m => m.Surname)
+@Html.TextBoxFor(m => m.Surname)
+@Html.DisplayNameFor(m => m.Pesel)
+@Html.TextBoxFor(m => m.Pesel)
+@Html.ValidationMessageFor(m => m.Pesel)
+@Html.DisplayNameFor(m => m.IsAlive)
+@Html.CheckBoxFor(m => m.IsAlive)
